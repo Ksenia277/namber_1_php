@@ -10,6 +10,8 @@ use FastRoute\DataGenerator\MarkBased;
 use FastRoute\Dispatcher\MarkBased as Dispatcher;
 use Src\Traits\SingletonTrait;
 
+
+
 class Route
 {
     use SingletonTrait;

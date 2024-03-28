@@ -1,0 +1,105 @@
+.nav {
+    gap: 60px;
+    display: flex;
+    background-color: bisque;
+    height: 60px;
+    align-items: center;
+    align-content: center;
+    width: 1900px;
+    padding: 0 40px; /* Add left and right padding */
+}
+
+.nav_home {
+    color: black;
+    font-size: 17px;
+    margin-left: 40px;
+}
+
+.signup {
+    display: flex;
+    justify-content: center;
+    margin: 0 40px; /* Add right margin */
+}
+
+form {
+    max-width: 300px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin: 0 auto; /* Center the form */
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 0.25rem;
+    border-radius: 3px;
+    height: 1.75rem;
+}
+
+button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    background-color: bisque;
+}
+
+.book-reader-info {
+    border: 1px solid;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    width: 300px;
+    margin-left: 40px;
+}
+
+.book-reader-info-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.book-reader-info-field label {
+    flex: 1;
+}
+
+.copies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.copies-book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+}
+
+.copies-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.form-container {
+    max-width: 300px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    margin: 0 auto;
+}
