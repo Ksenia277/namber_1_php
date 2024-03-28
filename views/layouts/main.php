@@ -17,17 +17,19 @@
         if (!app()->auth::check()):
             ?>
             <a class="nav_home" href="<?= app()->route->getUrl('/login') ?>">Вход</a>
-            <a class="nav_home" href="<?= app()->route->getUrl('/signup') ?>">Регистрация</a>
-            <a class="nav_home" href="<?= app()->route->getUrl('/addendum') ?>">Добавить читателя</a>
-            <a class="nav_home" href="<?= app()->route->getUrl('/distribution') ?>">Выдача книг</a>
-            <a class="nav_home" href="<?= app()->route->getUrl('/selection') ?>">Выбор книг и читателя</a>
-            <a class="nav_home" href="<?= app()->route->getUrl('/copies') ?>">Список копий</a>
         <?php
         else:
+            if (app()->auth::user()->id_roles === 1):
+                ?>
+
+            <?php
+            else:
+                ?>
+
+            <?php
+            endif;
             ?>
-            <ul>
-                <a href="<?= app()->route->getUrl('/logout') ?>">Выход (<?= app()->auth::user()->name ?>)</a>
-            </ul>
+            <a href="<?= app()->route->getUrl('/logout') ?>">Выход (<?= app()->auth::user()->name ?>)</a>
         <?php
         endif;
         ?>
@@ -35,7 +37,6 @@
 </header>
 <main>
     <div class="content">
-        <a class="nav_home" href="<?= app()->route->getUrl('/add') ?>">Добление книги</a>
         <?= $content ?? '' ?>
     </div>
 </main>

@@ -58,12 +58,5 @@ class Auth
         return true;
     }
 
-    public static function admincheck(): bool
-    {
-        if (self::$user->id_roles() == 1) {
-            return true;
-        }
-        return false;
-    }
 
 }
