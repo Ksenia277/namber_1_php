@@ -3,6 +3,7 @@
 </div>
 <?php foreach($readers as $reader): ?>
     <div class="book-reader-info">
+        <img src="public/<?= $reader->image ?>" alt="Photo" width="100" height="100">
         <div class="book-reader-info-field">
             <span>Книга:</span>
             <span id="book-name"><?= $reader->id_copy?></span>

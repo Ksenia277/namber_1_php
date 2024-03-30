@@ -15,6 +15,7 @@ class Reader extends Model
         'middlename',
         'address',
         'phone',
+        'image'
     ];
 
     public function getId(): int
