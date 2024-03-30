@@ -234,5 +234,18 @@ class Site
         return new View('site.selection', ['message' => 'hello working' , 'readers' => $readers]);
     }
 
+    public function poisk(Request $request): string
+    {
+
+        $books = Book::all();
+
+        if($request->method === 'POST'){
+            $temp = $request->all();
+            $bookID = $temp['book'];
+            $books = Book::where('title_book', 'LIKE', "%$bookID%")->get();
+        }
+
+        return new View('site.poisk', ['books' => $books]);
+    }
 }
 

@@ -34,6 +34,7 @@
                 <li><a href="<?= app()->route->getUrl('/distribution') ?>">Выдача книг</a></li>
                 <li><a href="<?= app()->route->getUrl('/selection') ?>">Выбор книг и читателя</a></li>
                 <li><a href="<?= app()->route->getUrl('/copies') ?>">Список копий</a></li>
+                <li><a href="<?= app()->route->getUrl('/poisk') ?>">Найти</a></li>
             </ul>
         <?php
         endif;
