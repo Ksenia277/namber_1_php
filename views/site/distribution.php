@@ -4,7 +4,7 @@
     <div class="signup">
         <form method="post">
             <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
-            <label>читатель
+            <label>Читатель
                 <select name="number_card">
                     <option value="">Выбрать читателя</option>
                     <?php foreach($readers as $reader): ?>

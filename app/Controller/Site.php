@@ -234,6 +234,18 @@ class Site
         return new View('site.selection', ['message' => 'hello working' , 'readers' => $readers]);
     }
 
+    public function copies(): string
+    {
+        $copys = Copy::all();
+        foreach($copys as $copy){
+            $id = $copy->id_book;
+            $bookname = Book::where('id_book', $id)->get();
+            $copy->name = $bookname[0]->title_book;
+        }
+
+        return new View('site.copies', ['message' => 'hello working', 'copys' => $copys]);
+    }
+
     public function poisk(Request $request): string
     {
 
