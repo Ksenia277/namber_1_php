@@ -6,7 +6,7 @@
     align-items: center;
     align-content: center;
     width: 1900px;
-    padding: 0 40px; /* Add left and right padding */
+    padding: 0 40px;
 }
 
 .nav_home {
@@ -18,7 +18,7 @@
 .signup {
     display: flex;
     justify-content: center;
-    margin: 0 40px; /* Add right margin */
+    margin: 0 40px;
 }
 
 form {
@@ -27,7 +27,7 @@ form {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
-    margin: 0 auto; /* Center the form */
+    margin: 0 auto;
     border: 1px solid #CCCCCC;
     border-radius: 5px;
 }

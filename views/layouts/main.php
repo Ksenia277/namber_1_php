@@ -19,15 +19,6 @@
             <a class="nav_home" href="<?= app()->route->getUrl('/login') ?>">Вход</a>
         <?php
         else:
-            if (app()->auth::user()->id_roles === 1):
-                ?>
-
-            <?php
-            else:
-                ?>
-
-            <?php
-            endif;
             ?>
             <a href="<?= app()->route->getUrl('/logout') ?>">Выход (<?= app()->auth::user()->name ?>)</a>
         <?php

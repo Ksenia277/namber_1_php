@@ -29,10 +29,11 @@
             <ul>
                 <li><a href="<?= app()->route->getUrl('/add') ?>">Добление книги</a></li>
                 <li><a href="<?= app()->route->getUrl('/addendum') ?>">Добавить читателя</a></li>
+                <li><a href="<?= app()->route->getUrl('/copy') ?>">Добление копии</a></li>
+                <li><a href="<?= app()->route->getUrl('/author') ?>">Добление автора</a></li>
                 <li><a href="<?= app()->route->getUrl('/distribution') ?>">Выдача книг</a></li>
                 <li><a href="<?= app()->route->getUrl('/selection') ?>">Выбор книг и читателя</a></li>
                 <li><a href="<?= app()->route->getUrl('/copies') ?>">Список копий</a></li>
-                <li><a href="<?= app()->route->getUrl('/add') ?>">Добление книги</a></li>
             </ul>
         <?php
         endif;
