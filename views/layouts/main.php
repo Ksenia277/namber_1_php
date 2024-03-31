@@ -17,7 +17,6 @@
         if (!app()->auth::check()):
             ?>
             <a class="nav_home" href="<?= app()->route->getUrl('/login') ?>">Вход</a>
-            <a class="nav_home" href="<?= app()->route->getUrl('/signup') ?>">Регистрация</a>
         <?php
         else:
             ?>
