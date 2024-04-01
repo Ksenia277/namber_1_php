@@ -1,5 +1,5 @@
 <div class="copies">
-    <h2>Выбор книги и читателя</h2>
+    <h2>Просмотр книги и читателя</h2>
 </div>
 <?php foreach($readers as $reader): ?>
     <div class="book-reader-info">
