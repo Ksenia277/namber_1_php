@@ -217,9 +217,30 @@ class Site
         return new View('site.addendum', ['message' => '']);
     }
 
-    public function selection(): string
+    public function selection(Request $request): string
     {
-        $readers = Book_Distribution::all();
+        $allReaders = Reader::all();
+
+        if($request->method === 'POST'){
+            $temp = $request->all();
+            $reader_id = $temp['reader_id'];
+
+            if(!empty($reader_id)){
+                app()->route->redirect('/selection?id='. $reader_id);
+            }
+            else {
+                app()->route->redirect('/selection');
+            }
+        }
+
+        if(array_key_exists('id', $request->all())){
+            $readers = Book_Distribution::where('number_card' , $request->id)->get();
+        }
+
+        else{
+            $readers = Book_Distribution::all();
+        }
+
         foreach($readers as $reader){
             $copies = Copy::where('id', $reader->id_copy)->get();
             foreach($copies as $copy){
@@ -231,7 +252,8 @@ class Site
             $reader->number_card = $user[0]->name;
             $reader->image = $user[0]->image;
         }
-        return new View('site.selection', ['message' => 'hello working' , 'readers' => $readers]);
+
+        return new View('site.selection', ['message' => 'hello working' , 'readers' => $readers, 'allReaders' => $allReaders]);
     }
 
     public function copies(): string

@@ -13,7 +13,7 @@ Route::add(['GET', 'POST'], '/addendum', [Controller\Site::class, 'addendum']);
 Route::add(['GET', 'POST'], '/author', [Controller\Site::class, 'author']);
 Route::add(['GET', 'POST'], '/copy', [Controller\Site::class, 'copy']);
 Route::add(['GET', 'POST'], '/poisk', [Controller\Site::class, 'poisk']);
-Route::add('GET', '/selection', [Controller\Site::class, 'selection']);
+Route::add(['GET', 'POST'], '/selection', [Controller\Site::class, 'selection']);
 Route::add('GET', '/copies', [Controller\Site::class, 'copies']);
 
 
