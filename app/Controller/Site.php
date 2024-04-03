@@ -244,6 +244,9 @@ class Site
         foreach($readers as $reader){
             $copies = Copy::where('id', $reader->id_copy)->get();
             foreach($copies as $copy){
+                $copyCount = Copy::where('id_book', $copy->id_book)->count();
+                $reader->copy_count = $copyCount;
+
                 $book = Book::where('id_book', $copy->id_book)->get();
                 $reader->id_copy = $book[0]->title_book;
             }

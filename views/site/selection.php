@@ -12,7 +12,7 @@
                 <div class="book-reader-info-field">
                     <span>Книга:</span>
                     <span id="book-name">
-                        <?= $reader->id_copy ?>
+                        <?= $reader->id_copy ?> (<?= $reader->copy_count?>)
                     </span>
                 </div>
                 <div class="book-reader-info-field">
